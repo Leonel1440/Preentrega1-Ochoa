@@ -2,7 +2,7 @@
 function hipertension(){
     let tension = 0;
     do {
-        let tensionUsuario = parseInt(prompt("Ponga aqui los valores de su presion arterial sistólica en caso de conocerlo de la siguiente manera: 120"))//parseInt pasa de string a número.
+        let tensionUsuario = parseInt(prompt("Ponga aqui los valores de su presion arterial sistólica en caso de conocerlo de la siguiente manera: 120"))
         if (parseInt(tensionUsuario) < 120) {
             alert("Optimo")
         }else if (parseInt(tensionUsuario)  === 120){
@@ -18,8 +18,8 @@ function hipertension(){
         } else{
             alert("Por favor introduzca los valores solicitados")
         }
-        tension = tensionUsuario;//en cada vuelta se va setear el valor de la variable de arriba, la cual será accesible por el while
-    } while (tension <1000);//NaN = not a number
+        tension = tensionUsuario;
+    } while (tension <1000);
     
 }
 
