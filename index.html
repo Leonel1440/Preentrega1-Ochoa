@@ -34,7 +34,62 @@
             <h2>¿De qué trata esta página?</h2>
             <p>Lorem ipsum dolor sit aamet consectetur adipisicing elit. Deserunt qui enim eum odit doloribus, id non consequuntur commodi tenetur temporibus inventore velit unde illo eligendi ab est quas exercitationem fuga sit. Aspernatur consequuntur error delectus, quisquam fugit, fuga magnam quae, et provident inventore ab doloribus rerum eum numquam adipisci cum harum corrupti cupiditate esse deserunt nulla neque! Eius fuga deleniti asperiores quis ratione in autem dolor adipisci aliquam. Quasi facilis explicabo debitis soluta? Aspernatur exercitationem eius labore, neque doloribus inventore esse ut numquam consectetur impedit eveniet eligendi, soluta placeat, nihil incidunt nemo cumque corrupti aperiam ullam ipsa quas nesciunt sit!</p>
         </section>
+
         
+        
+        <div class="div_presion">
+            <div class="div_presion_img">
+                <img src="./img/presion.jpg" alt="">
+            </div>
+            <div class="div_presion-funcion">
+                <h2>¿Quieres saber si tu presión es normal?</h2>
+                <input type="text" name="" id="inputPresion">
+                <p id="resultado"></p>
+                <button id="btn_presion">Enviar</button>
+            </div>
+        </div>
+
+
+        <div class="main_div">
+            <div class="pectoralMayor" id="div_child">
+                <img src="./img/pectoralMayor.jpg" alt="">
+                <button id="botonPectoral">Ver más</button>
+            </div>
+            <div class="dorsalAncho" id="div_child">
+                <img src="./img/dorsalAncho.jpg" alt="">
+                <button id="botonDorsal">Ver más</button>
+            </div>
+            <div class="bicepsBraquial" id="div_child">
+                <img src="./img/bicepsBraquial.jpg" alt="">
+                <button id="botonBiceps">Ver más</button>
+            </div>
+        </div>
+        <div class="invitacion">
+            <h2>¿Te gustaría recibir notificaciones de nuestro sitio web?</h2>
+            <p>Si la respuesta es "si", por favor completa el siguiente formulario para mantenerte al tanto de nuestras novedades</p>
+        </div>
+    
+        <div class="div-formulario">
+            <h2>FORMULARIO</h2>
+            <div class="div-input">
+                <input type="text" id="userInput" class="form-control my-2" placeholder="Ingresar usuario">
+                <div class="div-select">
+                    <h3>Materia de interes:</h3>
+                    <select name="curso" id="selectCurso">
+                        <option value="Anatomia">Anatomia</option>
+                        <option value="Fisiología">Fisiología</option>
+                        <option value="Microbiología">Microbiología</option>
+                        <option value="Neonatología">Neonatología</option>
+                        <option value="Farmacología">Farmacología</option>
+                    </select>
+                    
+                </div>
+                <button class="btn btn-primary" id="btnAgregar">Agregar</button>
+            </div>
+        </div>
+    
+    
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </main>
     <script src="./javascript/main.js"></script>
 </body>

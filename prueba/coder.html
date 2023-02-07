@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyMedFacil</title>
+    <link rel="stylesheet" href="anatoestilos.css">
+</head>
+<body>
+    <div class="div_presion">
+        <img src="presion.jpg" alt="">
+        <button id="btn_presion">Haz click aqui</button>
+    </div>
+    <div class="main_div">
+        <div class="pectoralMayor" id="div_child">
+            <img src="pectoralMayor.jpg" alt="">
+            <button id="botonPectoral">Ver más</button>
+        </div>
+        <div class="dorsalAncho" id="div_child">
+            <img src="dorsalAncho.jpg" alt="">
+            <button id="botonDorsal">Ver más</button>
+        </div>
+        <div class="bicepsBraquial" id="div_child">
+            <img src="bicepsBraquial.jpg" alt="">
+            <button id="botonBiceps">Ver más</button>
+        </div>
+    </div>
+    <div class="invitacion">
+        <h2>¿Te gustaría recibir notificaciones de nuestro sitio web?</h2>
+        <p>Si la respuesta es "si", por favor completa el siguiente formulario para mantenerte al tanto de nuestras novedades</p>
+    </div>
+
+    <div class="div-formulario">
+        <h2>FORMULARIO</h2>
+        <div class="div-input">
+
+            <input type="text" id="userInput" class="form-control my-2">
+            <select name="curso" id="selectCurso">
+                <option value="Anatomia">Anatomia</option>
+                <option value="Fisiología">Fisiología</option>
+                <option value="Microbiología">Microbiología</option>
+                <option value="Neonatología">Neonatología</option>
+                <option value="Farmacología">Farmacología</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" id="btnAgregar">Agregar</button>
+    </div>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/yt/practicas/coderanato1.js"></script>
+</body>
+</html>
+
+
+    <!-- Abajo haremos un form donde preguntemos si quiere estar al día de las novedades que se subiran a la página, y si lo quieren, pues que se registren -->
+    <!-- <form autocomplete="off">
+        <h2>FORMULARIO</h2>
+        <input type="text" placeholder="Nombre Completo" id="nombre">
+        <input type="email" placeholder="Email" id="email">
+        <input type="text" placeholder="Materia de interes" id="materia">
+        <input type="submit" value="Solicitar suscripción" id="btn-enviar">
+        <div class="resultado">
+
+        </div>
+    </form> -->
