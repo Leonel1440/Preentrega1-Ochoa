@@ -30,26 +30,31 @@
         <h2>¿Te gustaría recibir notificaciones de nuestro sitio web?</h2>
         <p>Si la respuesta es "si", por favor completa el siguiente formulario para mantenerte al tanto de nuestras novedades</p>
     </div>
-
     <div class="div-formulario">
         <h2>FORMULARIO</h2>
         <div class="div-input">
-
-            <input type="text" id="userInput" class="form-control my-2">
-            <select name="curso" id="selectCurso">
-                <option value="Anatomia">Anatomia</option>
-                <option value="Fisiología">Fisiología</option>
-                <option value="Microbiología">Microbiología</option>
-                <option value="Neonatología">Neonatología</option>
-                <option value="Farmacología">Farmacología</option>
-            </select>
+            
+            <input type="text" id="userInput" class="form-control my-2" placeholder="Ingresar usuario">
+            <input type="email" id="emailInput" placeholder="medico22@gmail.com">
+            <div class="div-select">
+                <h3>Materia de interes:</h3>
+                <select name="curso" id="selectCurso">
+                    <option value="Anatomia">Anatomia</option>
+                    <option value="Fisiología">Fisiología</option>
+                    <option value="Microbiología">Microbiología</option>
+                    <option value="Neonatología">Neonatología</option>
+                    <option value="Farmacología">Farmacología</option>
+                </select>
+                
+            </div>
+            <button class="btn btn-primary" id="btnAgregar">Agregar</button>
         </div>
-        <button class="btn btn-primary" id="btnAgregar">Agregar</button>
     </div>
 
 
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="/yt/practicas/coderanato1.js"></script>
+    <script src="coderanato1.js"></script>
 </body>
 </html>
 

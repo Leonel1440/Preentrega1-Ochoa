@@ -137,27 +137,30 @@ if (usuariosLS) {
 }
 
 const userInput = document.querySelector(`#userInput`)
+const emailInput = document.querySelector(`#emailInput`)
 const selectCurso = document.querySelector(`#selectCurso`)
 const btnAgregar = document.querySelector(`#btnAgregar`)
 
 btnAgregar.addEventListener('click', () => {
     const nombre = userInput.value
+    const email = emailInput.value
     const curso = selectCurso.value
 
-    if (nombre === '') return
+    if (nombre === '' && email === '') return
 
     const user = {
         id: usuarios.length + 1,
         nombre: nombre,
+        email: email,
         curso: curso
     }
 
     usuarios.push(user)
     userInput.value = ""
+    emailInput.value = ""
 
     localStorage.setItem('usuarios', JSON.stringify(usuarios))
 })
-
 
 
 
