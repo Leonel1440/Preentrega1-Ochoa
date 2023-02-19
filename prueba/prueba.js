@@ -23,10 +23,117 @@ function hipertension(){
         }
 }
 
-//mmm qué sera?mmmm que raro, reinicio la pc?, okaaa
-//che hay a veces que la pantalla se me apaga, por un microsegundo, y cómo se soluciona? ahhh ahhh joya caimos en un bucle, no?
-//entonces podríamos hacer un if normal, no?
-//asi? si si, si, esto es una condicional?, ahhh claro, al pedo porque tenemos los eventios, que al apretarlo se repite cuantas veces queramos segun las veces que lo apretamos, claro claro
-//joya joya
-//con un innerthml? claro claro asdasdd es un igual ====, xd, niceee
-//joyita, gracias por tu tiempo, te quiero, sis i descansa, te lo merecesss, tkmmm, byeeeeee
+
+
+
+
+
+
+
+
+
+let temperaturaValor = document.getElementById('temperatura-valor')
+let temperaturaDescripcion = document.getElementById('temperatura-descripcion')
+
+let ubicacion = document.getElementById('ubicacion')
+let iconoAnimado = document.getElementById('icono-animado')
+
+let vientoVelocidad = document.getElementById('viento-velocidad')
+
+
+window.addEventListener('load',()=>{
+    let lon
+    let lat
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition( posicion => {
+            // console.log(posicion.coords.latitude)
+            lon = posicion.coords.longitude
+            lat = posicion.coords.latitude
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b15628d82432859e4dd6fc11d3ea81fa`;
+
+            // console.log(url)
+            fetch(url)
+                .then( response => {return response.json()})
+                .then ( data => {
+                    let temp = Math.round(data.main.temp)
+                    temperaturaValor.textContent = `${temp} ˚C`
+
+                    let desc = data.weather[0].description
+                    temperaturaDescripcion.textContent = desc.toUpperCase()
+
+
+                    ubicacion.textContent = data.name
+
+                    vientoVelocidad.textContent = `${data.wind.speed} m/s`
+
+                    // const urlIcon = `http://openweathermap.org/img/wn/${iconCode}.png`
+                    
+                    switch (data.weather[0].main) {
+                        case 'Thunderstorm':
+                          iconoAnimado.src='animated/thunder.svg'
+                          console.log('TORMENTA');
+                          break;
+                        case 'Drizzle':
+                          iconoAnimado.src='animated/rainy-2.svg'
+                          console.log('LLOVIZNA');
+                          break;
+                        case 'Rain':
+                          iconoAnimado.src='animated/rainy-7.svg'
+                          console.log('LLUVIA');
+                          break;
+                        case 'Snow':
+                          iconoAnimado.src='animated/snowy-6.svg'
+                            console.log('NIEVE');
+                          break;                        
+                        case 'Clear':
+                            iconoAnimado.src='animated/day.svg'
+                            console.log('LIMPIO');
+                          break;
+                        case 'Atmosphere':
+                          iconoAnimado.src='animated/weather.svg'
+                            console.log('ATMOSFERA');
+                            break;  
+                        case 'Clouds':
+                            iconoAnimado.src='animated/cloudy-day-1.svg'
+                            console.log('NUBES');
+                            break;  
+                        default:
+                          iconoAnimado.src='animated/cloudy-day-1.svg'
+                          console.log('por defecto');
+                      }
+
+                })
+                .catch( error => {
+                    console.log(error)
+                })
+        })
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
