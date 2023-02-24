@@ -13,12 +13,10 @@ window.addEventListener('load',()=>{
     let lat
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition( posicion => {
-            // console.log(posicion.coords.latitude)
             lon = posicion.coords.longitude
             lat = posicion.coords.latitude
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b15628d82432859e4dd6fc11d3ea81fa`;
 
-            // console.log(url)
             fetch(url)
                 .then( response => {return response.json()})
                 .then ( data => {
@@ -32,42 +30,40 @@ window.addEventListener('load',()=>{
                     ubicacion.textContent = data.name
 
                     vientoVelocidad.textContent = `${data.wind.speed} m/s`
-
-                    // const urlIcon = `http://openweathermap.org/img/wn/${iconCode}.png`
                     
                     switch (data.weather[0].main) {
                         case 'Thunderstorm':
-                          iconoAnimado.src='../animated/thunder.svg'
-                          console.log('TORMENTA');
-                          break;
+                            iconoAnimado.src='./animated/thunder.svg'
+                            console.log('TORMENTA');
+                            break;
                         case 'Drizzle':
-                          iconoAnimado.src='../animated/rainy-2.svg'
-                          console.log('LLOVIZNA');
-                          break;
+                            iconoAnimado.src='./animated/rainy-2.svg'
+                            console.log('LLOVIZNA');
+                            break;
                         case 'Rain':
-                          iconoAnimado.src='../animated/rainy-7.svg'
-                          console.log('LLUVIA');
-                          break;
+                            iconoAnimado.src='./animated/rainy-7.svg'
+                            console.log('LLUVIA');
+                            break;
                         case 'Snow':
-                          iconoAnimado.src='../animated/snowy-6.svg'
+                            iconoAnimado.src='./animated/snowy-6.svg'
                             console.log('NIEVE');
-                          break;                        
+                            break;                        
                         case 'Clear':
-                            iconoAnimado.src='../animated/day.svg'
+                            iconoAnimado.src='./animated/day.svg'
                             console.log('LIMPIO');
-                          break;
+                            break;
                         case 'Atmosphere':
-                          iconoAnimado.src='../animated/weather.svg'
+                            iconoAnimado.src='./animated/weather.svg'
                             console.log('ATMOSFERA');
                             break;  
                         case 'Clouds':
-                            iconoAnimado.src='../animated/cloudy-day-1.svg'
+                            iconoAnimado.src='./animated/cloudy-day-1.svg'
                             console.log('NUBES');
                             break;  
                         default:
-                          iconoAnimado.src='../animated/cloudy-day-1.svg'
-                          console.log('por defecto');
-                      }
+                            iconoAnimado.src='./animated/cloudy-day-1.svg'
+                            console.log('por defecto');
+                        }
 
                 })
                 .catch( error => {
@@ -76,36 +72,6 @@ window.addEventListener('load',()=>{
         })
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -138,8 +104,7 @@ function hipertension(){
 let boton1 = document.getElementById("botonPectoral")
 botonPectoral.addEventListener("click",sweetAlert)
 
-const imgPectoral = "./clase 0/img/pectoralMayor.jpg"
-// import {imgPectoral} from "./clase 0/img/pectoralMayor";
+const imgPectoral = "./img/pectoralMayor.jpg"
 function sweetAlert(){
     swal({
         title: "Pectoral mayor",
@@ -151,12 +116,12 @@ function sweetAlert(){
 let boton2 = document.getElementById("botonDorsal")
 botonDorsal.addEventListener("click",sweetAlert2)
 
-const imgDorsal = "dorsalAncho.jpg"
+const imgDorsal = "./img/dorsalAncho.jpg"
 function sweetAlert2(){
     swal({
         title: "Dorsal ancho",
         text: "El músculo Dorsal ancho se encuentra inervado por: Los Nervio toracodorsal.Irrigado por Arteria toracodorsal, arterias intercostales posteriores, ramas perforantes 9-11 y arterias lumbares 1-3.En cuanto a sus inserciones, su origen está en la Porción vertebral: procesos espinosos de las vértebras T7-T12, fascia toracolumbar Porción ilíaca: tercio posterior de la cresta ilíaca Porción costal: costillas 9-12 Porción escapular: ángulo inferior de la escápula y se insertan en Surco intertubercular del húmero, entre los músculos pectoral mayor y redondo mayor.",
-        icon: "dorsalAncho.jpg",
+        icon: imgDorsal,
     });
 }
 
@@ -164,12 +129,12 @@ function sweetAlert2(){
 let boton3 = document.getElementById("botonBiceps")
 botonBiceps.addEventListener("click",sweetAlert3)
 
-const imgBiceps = "bicepsBraquial.jpg"
+const imgBiceps = "./img/bicepsBraquial.jpg"
 function sweetAlert3(){
     swal({
         title: "Biceps braquial",
         text: "El músculo Biceps braquial se encuentra inervado por: Los Nervio musculocutáneo (C5- C6).Irrigado por Ramas de la arteria braquial.En cuanto a sus inserciones, su origen está en la Cabeza corta: vértice del proceso coracoides de la escápula Cabeza larga: tubérculo supraglenoideo de la escápula y se insertan en Tuberosidad del radio Fascia profunda del antebrazo (inserción de la aponeurosis del músculo bíceps braquial o bicipital).",
-        icon: "bicepsBraquial.jpg",
+        icon: imgBiceps,
     });
 }
 
