@@ -149,18 +149,21 @@ if (usuariosLS) {
 }
 
 const userInput = document.querySelector(`#userInput`)
+const emailInput = document.querySelector(`#emailInput`)
 const selectCurso = document.querySelector(`#selectCurso`)
 const btnAgregar = document.querySelector(`#btnAgregar`)
 
 btnAgregar.addEventListener('click', () => {
     const nombre = userInput.value
     const curso = selectCurso.value
+    const email = emailInput.value
 
     if (nombre === '') return
 
     const user = {
         id: usuarios.length + 1,
         nombre: nombre,
+        email: email,
         curso: curso
     }
 
