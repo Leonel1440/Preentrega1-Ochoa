@@ -1,198 +1,79 @@
+// const button = document.querySelector('button');
 
-let temperaturaValor = document.getElementById('temperatura-valor')
-let temperaturaDescripcion = document.getElementById('temperatura-descripcion')
-
-let ubicacion = document.getElementById('ubicacion')
-let iconoAnimado = document.getElementById('icono-animado')
-
-let vientoVelocidad = document.getElementById('viento-velocidad')
-
-
-window.addEventListener('load',()=>{
-    let lon
-    let lat
-    if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition( posicion => {
-            // console.log(posicion.coords.latitude)
-            lon = posicion.coords.longitude
-            lat = posicion.coords.latitude
-            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b15628d82432859e4dd6fc11d3ea81fa`;
-
-            // console.log(url)
-            fetch(url)
-                .then( response => {return response.json()})
-                .then ( data => {
-                    let temp = Math.round(data.main.temp)
-                    temperaturaValor.textContent = `${temp} ˚C`
-
-                    let desc = data.weather[0].description
-                    temperaturaDescripcion.textContent = desc.toUpperCase()
-
-
-                    ubicacion.textContent = data.name
-
-                    vientoVelocidad.textContent = `${data.wind.speed} m/s`
-
-                    // const urlIcon = `http://openweathermap.org/img/wn/${iconCode}.png`
-                    
-                    switch (data.weather[0].main) {
-                        case 'Thunderstorm':
-                          iconoAnimado.src='./prueba/animated/thunder.svg'
-                          console.log('TORMENTA');
-                          break;
-                        case 'Drizzle':
-                          iconoAnimado.src='./prueba/animated/rainy-2.svg'
-                          console.log('LLOVIZNA');
-                          break;
-                        case 'Rain':
-                          iconoAnimado.src='./prueba/animated/rainy-7.svg'
-                          console.log('LLUVIA');
-                          break;
-                        case 'Snow':
-                          iconoAnimado.src='./prueba/animated/snowy-6.svg'
-                            console.log('NIEVE');
-                          break;                        
-                        case 'Clear':
-                            iconoAnimado.src='./prueba/animated/day.svg'
-                            console.log('LIMPIO');
-                          break;
-                        case 'Atmosphere':
-                          iconoAnimado.src='./prueba/animated/weather.svg'
-                            console.log('ATMOSFERA');
-                            break;  
-                        case 'Clouds':
-                            iconoAnimado.src='./prueba/animated/cloudy-day-1.svg'
-                            console.log('NUBES');
-                            break;  
-                        default:
-                          iconoAnimado.src='./prueba/animated/cloudy-day-1.svg'
-                          console.log('por defecto');
-                      }
-
-                })
-                .catch( error => {
-                    console.log(error)
-                })
-        })
-    }
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let btn_presion = document.getElementById("btn_presion");
-btn_presion.addEventListener("click",hipertension)
-const resultado = document.getElementById("resultado");
-
-
-function hipertension(){
-    const tensionUsuario = parseInt(document.getElementById("inputPresion").value);
-        if (tensionUsuario < 120) {
-            resultado.innerHTML = "Optimo"
-        }else if (tensionUsuario === 120){
-            resultado.innerHTML = "Normal"
-        }else if (tensionUsuario  <= 130){
-            resultado.innerHTML = "Normal alta"
-        }else if(tensionUsuario <= 140){
-            resultado.innerHTML = "Hipertensión grado 1"
-        }else if (tensionUsuario <= 160){
-            resultado.innerHTML = "Hipertensión grado 2"
-        }else if (tensionUsuario >= 180){
-            resultado.innerHTML = "Hipertensión grado 3"
-        } else{
-            resultado.innerHTML = "Por favor introduzca los valores solicitados"
-        }
+// button.onclick = function() {
+//     let name = prompt('¿Cuál es tu nombre?');
+//     alert('¡Hola ' + name + ', encantado de verte!');
 }
+//Otra cosa especial acerca de las variables es que pueden contener casi cualquier cosa, no solo cadenas y números. Las variables también pueden contener datos complejos e incluso funciones completas para hacer cosas asombrosas
 
-let boton1 = document.getElementById("botonPectoral")
-botonPectoral.addEventListener("click",sweetAlert)
+// function hipertension(){
+//     let tension = 0;
+//     do {
+//         let tensionUsuario = parseInt(prompt("Ponga aqui los valores de su presion arterial sistólica en caso de conocerlo de la siguiente manera: 120"))//parseInt pasa de string a número.
+//         if (parseInt(tensionUsuario) < 120) {
+//             alert("Optimo")
+//         }else if (parseInt(tensionUsuario)  === 120){
+//             alert("Normal");
+//         }else if (parseInt(tensionUsuario)  <= 130){
+//             alert("Normal alta");
+//         }else if(parseInt(tensionUsuario)  <= 140){
+//             alert("Hipertensión grado 1");
+//         }else if (parseInt(tensionUsuario)  <= 160){
+//             alert("Hipertensión grado 2");
+//         }else if (parseInt(tensionUsuario)  >= 180){
+//             alert("Hipertensión grado 3")
+//         } else{
+//             alert("Por favor introduzca los valores solicitados")
+//         }
+//         tension = tensionUsuario;//en cada vuelta se va setear el valor de la variable de arriba, la cual será accesible por el while
+//     } while (tension <1000);//NaN = not a number
+    
+// }
 
-const imgPectoral = "./img/pectoralMayor.jpg"
-function sweetAlert(){
-    swal({
-        title: "Pectoral mayor",
-        text: "El músculo Pectoral Mayor se encuentra inervado por: Los Nervios pectorales lateral y medial.Irrigado por Ramas pectorales de la arteria toracoacromial, ramas perforantes de la arteria torácica interna.En cuanto a sus inserciones, su origen está en la Porción clavicular: cara anterior de la mitad medial de la clavícula Porción esternocostal: cara anterior del esternón, cartílagos costales 1-6 Porción abdominal: capa anterior de la vaina de los músculos rectos del abdomen y se insertan en Cresta del tubérculo mayor del húmero.",
-        icon: "./img/pectoralMayor.jpg",
-    });
-}
-
-let boton2 = document.getElementById("botonDorsal")
-botonDorsal.addEventListener("click",sweetAlert2)
-
-const imgDorsal = "./img/dorsalAncho.jpg"
-function sweetAlert2(){
-    swal({
-        title: "Dorsal ancho",
-        text: "El músculo Dorsal ancho se encuentra inervado por: Los Nervio toracodorsal.Irrigado por Arteria toracodorsal, arterias intercostales posteriores, ramas perforantes 9-11 y arterias lumbares 1-3.En cuanto a sus inserciones, su origen está en la Porción vertebral: procesos espinosos de las vértebras T7-T12, fascia toracolumbar Porción ilíaca: tercio posterior de la cresta ilíaca Porción costal: costillas 9-12 Porción escapular: ángulo inferior de la escápula y se insertan en Surco intertubercular del húmero, entre los músculos pectoral mayor y redondo mayor.",
-        icon: "./img/dorsalAncho.jpg",
-    });
-}
-
-
-let boton3 = document.getElementById("botonBiceps")
-botonBiceps.addEventListener("click",sweetAlert3)
-
-const imgBiceps = "./img/bicepsBraquial.jpg"
-function sweetAlert3(){
-    swal({
-        title: "Biceps braquial",
-        text: "El músculo Biceps braquial se encuentra inervado por: Los Nervio musculocutáneo (C5- C6).Irrigado por Ramas de la arteria braquial.En cuanto a sus inserciones, su origen está en la Cabeza corta: vértice del proceso coracoides de la escápula Cabeza larga: tubérculo supraglenoideo de la escápula y se insertan en Tuberosidad del radio Fascia profunda del antebrazo (inserción de la aponeurosis del músculo bíceps braquial o bicipital).",
-        icon: "./img/bicepsBraquial.jpg",
-    });
-}
-
-let usuarios = []
-const usuariosLS = JSON.parse( localStorage.getItem('usuarios') )
-
-if (usuariosLS) {
-    usuarios = usuariosLS
-}
-
-const userInput = document.querySelector(`#userInput`)
-const emailInput = document.querySelector(`#emailInput`)
-const selectCurso = document.querySelector(`#selectCurso`)
-const btnAgregar = document.querySelector(`#btnAgregar`)
-
-btnAgregar.addEventListener('click', () => {
-    const nombre = userInput.value
-    const email = emailInput.value
-    const curso = selectCurso.value
-
-    if (nombre === '' && email === '') return
-
-    const user = {
-        id: usuarios.length + 1,
-        nombre: nombre,
-        email: email,
-        curso: curso
-    }
-
-    usuarios.push(user)
-    userInput.value = ""
-    emailInput.value = ""
-
-    localStorage.setItem('usuarios', JSON.stringify(usuarios))
-})
+// hipertension();
 
 
+
+// class Ambo{
+//     constructor(talle, color, precio, diseño,){
+//         this.talle = talle;
+//         this.color = color;
+//         this.precios = Number(precio);
+//         this.diseño = diseño;
+//         this.compra = compra;
+//     }
+//     compra(){
+//         alert(`Felicidades usted ha comprado lo siguiente: ${compra}`)
+//     }
+// }
+
+// const ropaMedicine_01 = new Ambo ("L", "bordo", "$10000", "sin diseño", "Ambo bordo talle L sin diseño");
+// const ropaMedicine_02 = new Ambo ("XL", "violeta", "$18000", "con diseño", "Ambo violeta talle XL con diseño");
+// const ropaMedicine_03 = new Ambo ("M", "azul marino", "$18000", "con diseño", "Ambo azul marino talle M con diseño");
+// const ropaMedicine_04 = new Ambo ("S", "negro", "$10000", "sin diseño", "Ambo negrotalle S sin diseño");
+// const ropaMedicine_05 = new Ambo ("L", "blanco", "$18000", "con diseño", "Ambo blanco talle L con diseño");
+
+
+// ropaMedicine_01.compra();
+
+// function comprarAmbo(){
+//     let compra = prompt("¿Qué ambo te gustaría comprar?")
+//     if (compra == ropaMedicine_01) {
+//         alert("Felicidades, usted ha elegido el siguiente modelo: " + ropaMedicine_01)
+//     }else if(compra == ropaMedicine_02){
+//         alert("Felicidades, usted ha elegido el siguiente modelo: " + ropaMedicine_02)
+//     }
+//     else if(compra == ropaMedicine_03){
+//         alert("Felicidades, usted ha elegido el siguiente modelo: " + ropaMedicine_03)
+//     }else if(compra == ropaMedicine_04){
+//         alert("Felicidades, usted ha elegido el siguiente modelo: " + ropaMedicine_04)
+//     }else if(compra == ropaMedicine_05){
+//         alert("Felicidades, usted ha elegido el siguiente modelo: " + ropaMedicine_05)
+//     }else{
+//         alert("Lo lamentamos, no tenemos ese ambo")
+//     }
+
+// }
 
 
 
@@ -201,3 +82,109 @@ btnAgregar.addEventListener('click', () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let numero1 = 3;
+// let numero2 = 6;
+
+// resultado = numero1 * numero2;
+// console.log(resultado)
+
+
+// let numero1 = 3;
+// let numero2 = 2;
+
+// numero1 -= numero2;
+
+// console.log(numero1)
+
+
+
+//saludo = "Hola Pedro";
+//pregunta = "¿Cómo estás";
+//frase = saludo + pregunta;
+// document.write(frase) es como console log pero se muestra
+
+//variable = parseInt(variable); esto nos sirve para convertir un string a entero

@@ -1,16 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Sofia+Sans:ital,wght@0,400;1,300&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: rgb(194, 194, 194);
+  background-color: white;
 }
 
 .header {
   padding: 10px;
-  background-color: rgb(27, 92, 70);
+  background-color: rgb(50, 154, 138);
   display: flex;
   justify-content: space-between;
 }
@@ -43,127 +45,246 @@ body {
   box-shadow: 0px 2px 0px white;
 }
 
-.main__portada img {
-  width: 1603px;
-  height: 690px;
-  display: block;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.main__section-1 {
-  display: flex;
-  flex-direction: column;
-}
-.main__section-1 h2 {
+.main #contenedor {
   text-align: center;
-  padding-top: 2%;
-}
-.main__section-1 p {
-  margin: 5%;
-}
-.main .div_presion {
   display: flex;
   flex-direction: row;
-  padding: 10px;
-  width: 50%;
-  background-color: rgb(52, 124, 101);
-  margin: 20px auto;
+  background-color: rgb(50, 154, 138);
+  width: 100%;
 }
-.main .div_presion .div_presion_img img {
-  width: 70%;
-}
-.main .div_presion .div_presion-funcion {
-  color: white;
-}
-.main .div_presion .div_presion-funcion h2 {
-  margin: 10px 0;
-}
-.main .div_presion .div_presion-funcion input {
-  margin: 30px 0 30px 0;
-}
-.main .div_presion .div_presion-funcion p {
-  margin-bottom: 5px;
-}
-.main .main_div {
-  background-color: rgb(52, 124, 101);
-  display: flex;
-  flex-direction: row;
-  margin: 0 10%;
-}
-.main .main_div #div_child {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-  margin: 40px auto;
-}
-.main .main_div #div_child button {
-  margin: 18px 25%;
-}
-.main .invitacion {
-  padding: 30px;
-  width: 50%;
-  background-color: rgb(52, 124, 101);
-  margin: 20px auto;
-  color: white;
-}
-.main .div-formulario {
-  padding: 30px;
-  width: 30%;
-  background-color: rgb(52, 124, 101);
-  margin: 20px auto;
-  color: white;
-}
-.main .div-formulario h2 {
-  text-align: center;
-}
-.main .div-formulario input {
-  margin: 20px 5%;
-}
-.main .div-formulario .div-select {
-  margin-left: 5%;
-}
-.main .div-formulario .div-select h3 {
-  margin-bottom: 20px;
-}
-.main .div-formulario button {
-  margin-top: 10px;
-  margin-left: 5%;
-}/*# sourceMappingURL=main.css.map */
-
-
-
-
-
-
-
-#contenedor {
-  margin: 10px 67% 0;
-  height: 20vh;
-  text-align: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
-}
-
-#caja1, #caja2, #caja3 {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 20%;
+.main #contenedor #caja1, .main #contenedor #caja2, .main #contenedor #caja3 {
+  padding: 20px;
+  margin: 7px;
   width: 200px;
-  height: 200px;
+  box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.87);
+}
+.main #contenedor #caja1 {
+  background-color: rgba(0, 0, 0, 0.767);
+  color: azure;
+}
+.main #contenedor #caja2 {
+  background-color: darkslateblue;
+  color: azure;
+}
+.main #contenedor #caja3 {
+  background-color: #2ab2ea;
+  color: azure;
+}
+.main .div__portada {
+  display: flex;
+  background-color: rgb(50, 154, 138);
+}
+.main .div__portada .main__img {
+  height: 800px;
+  width: 800px;
+  max-width: 1000px;
+}
+.main .div__portada .main__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.main .div__portada .main__txt {
+  height: 800px;
+  width: 1100px;
+  padding: 12.5%;
+}
+.main .div__portada .main__txt a {
+  text-decoration: none;
+}
+.main .div__portada .main__txt h2 {
+  margin-bottom: 30px;
+  font-size: 400%;
+  color: aliceblue;
+}
+.main .div__portada .main__txt p {
+  color: aliceblue;
+  margin-bottom: 30px;
+  font-size: 120%;
+  font-family: "Sofia Sans", sans-serif;
+  font-weight: 400;
+}
+.main .div__portada .main__txt button {
+  padding: 1.8%;
+  border-radius: 60px;
+  font-weight: bold;
+}
+.main .section1 {
+  display: flex;
+}
+.main .section1 #section__div2 {
+  background-color: rgb(72, 199, 161);
+}
+.main .section1 #section__div3 {
+  background-color: rgb(78, 161, 147);
+}
+.main .section1 #section__div4 {
+  background-color: rgb(45, 153, 148);
+}
+.main .section1 .section__div {
+  padding: 10px;
+  background-color: rgb(61, 219, 172);
+  width: 600px;
+}
+.main .section1 .section__div .divdiv {
+  display: flex;
+}
+.main .section1 .section__div .divdiv a {
+  margin-left: 10px;
+  color: white;
+  text-decoration: none;
+}
+.main .section1 .section__div div img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.main .section1 .section__div h2 {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  color: white;
+}
+.main .section1 .section__div p {
+  margin-bottom: 20px;
+  padding-left: 10px;
+  color: white;
+}
+.main .section2 {
+  display: flex;
+}
+.main .section2 .div__section2 h2 {
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 80px;
+}
+.main .section2 .div__section2 p {
+  padding-left: 160px;
+  padding-right: 160px;
+}
+.main .section2 img {
+  padding: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
 }
 
-#caja1 {
-  background-color: rgba(0,0,0,0.767);
-  color:azure;    
+.div_presion {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(78, 161, 147);
+  padding: 10px;
+  width: 100%;
+  height: 500px;
 }
-#caja2 {
-  background-color: darkslateblue;
-  color:azure;    
+.div_presion img {
+  width: 45%;
 }
-#caja3 {
-  background-color: #2ab2ea;
-  color:azure;    
+.div_presion div {
+  width: 50%;
+  text-align: center;
 }
+.div_presion div h2 {
+  color: white;
+  margin: 50px 0;
+}
+.div_presion div input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 6px solid rgb(67, 139, 127);
+}
+.div_presion div p {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+.div_presion div button {
+  border-radius: 15px;
+  text-shadow: 2px 1px 4px #666666;
+  box-shadow: 1px 5px 4px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #42b393;
+  padding: 8px 20px 8px 20px;
+  text-decoration: none;
+}
+.div_presion div button:hover {
+  background: #4ac4a1;
+}
+
+.main_div {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: 50px auto;
+  box-shadow: 0px 6px 17px 2px rgba(0, 0, 0, 0.87);
+}
+.main_div #div_child {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+.main_div #div_child button {
+  margin: 40px 0;
+}
+
+.div-formulario {
+  width: 800px;
+  margin: 100px auto;
+  background-color: rgb(63, 145, 131);
+  color: white;
+  padding: 40px;
+  box-shadow: -10px 10px 18px -11px rgba(0, 0, 0, 0.87);
+}
+.div-formulario h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.div-formulario p {
+  text-align: center;
+}
+.div-formulario .div-pregunta {
+  margin-bottom: 50px;
+}
+.div-formulario .div-input h2 {
+  margin-bottom: 40px;
+}
+.div-formulario .div-input input {
+  margin-left: 280px;
+  margin-bottom: 20px;
+  padding: 8px;
+}
+.div-formulario .div-input h3 {
+  text-align: center;
+}
+.div-formulario .div-input #selectCurso {
+  margin-left: 40%;
+  margin-top: 10px;
+}
+.div-formulario button {
+  margin-top: 50px;
+  margin-left: 282px;
+  border-radius: 15px;
+  text-shadow: 2px 1px 4px #666666;
+  box-shadow: 1px 5px 4px #666666;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 15px;
+  background: #42b393;
+  padding: 10px 26px 10px 20px;
+  text-decoration: none;
+}
+.div-formulario button:hover {
+  background: #49c7a3;
+  text-decoration: none;
+}
+
+footer {
+  background-color: rgb(27, 27, 44);
+  height: 400px;
+}/*# sourceMappingURL=main.css.map */

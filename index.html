@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
     <link rel="stylesheet" href="./sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header class="header">
         <div class="header__logo">
-            <img src="./img/medicine-logo.jpg" alt="">
-            <h1>Estudia-Med fácil</h1>
+            <img src="./img/pulso.png" alt="">
+            <h1>MED STUDY EASY</h1>
         </div>
         <div class="header__links">
             <nav>
@@ -26,89 +29,152 @@
             </nav>
         </div>
     </header>
-    <div id="contenedor">
-        <div id="caja1">
-            <h1 id="temperatura-valor"></h1>
-            <h1 id="temperatura-descripcion"></h1>
-        </div>
-
-        <div id="caja2">
-            <h2 id="ubicacion"></h2>
-            <img id="icono-animado" src="" alt="">
-        </div>
-
-        <div id="caja3">
-            <h3>Veloc. del viento</h3>
-            <h1 id="viento-velocidad"></h1>
-        </div>
-    </div>
     <main class="main">
-        <div class="main__portada">
-            <img src="./img/portada.jpg" alt="">
+        <div id="contenedor">
+            <div id="caja1">
+                <h1 id="temperatura-valor"></h1>
+                <h1 id="temperatura-descripcion"></h1>
+            </div>
+    
+            <div id="caja2">
+                <h2 id="ubicacion"></h2>
+                <img id="icono-animado" src="" alt="">
+            </div>
+    
+            <div id="caja3">
+                <h3>Veloc. del viento</h3>
+                <h1 id="viento-velocidad"></h1>
+            </div>
         </div>
-        <section class="main__section-1">
-            <h2>¿De qué trata esta página?</h2>
-            <p>Lorem ipsum dolor sit aamet consectetur adipisicing elit. Deserunt qui enim eum odit doloribus, id non consequuntur commodi tenetur temporibus inventore velit unde illo eligendi ab est quas exercitationem fuga sit. Aspernatur consequuntur error delectus, quisquam fugit, fuga magnam quae, et provident inventore ab doloribus rerum eum numquam adipisci cum harum corrupti cupiditate esse deserunt nulla neque! Eius fuga deleniti asperiores quis ratione in autem dolor adipisci aliquam. Quasi facilis explicabo debitis soluta? Aspernatur exercitationem eius labore, neque doloribus inventore esse ut numquam consectetur impedit eveniet eligendi, soluta placeat, nihil incidunt nemo cumque corrupti aperiam ullam ipsa quas nesciunt sit!</p>
+        <div class="div__portada">
+            <div class="main__img">
+                <img src="./img/doctor.png" alt="Future Medical Student">
+                <!-- A veces el problema no es el css de que la img no ocupé todo el contenedor, a veces el problema también puede ser de la img, fijate al descargarla si el objeto que te interesa de la img ocupa su propia img, o sea si no deja espacios GRANDES en algún lugar -->
+            </div>
+            <div class="main__txt">
+                <h2>Estamos aqui para guiarte en tu Estudio</h2>
+                <p>Únete a nuestro sitio web donde podrás aprender Medicina de la mejor manera posible, encontrarás toda la información necesaria ordenada de tal manera que resulte sencillo y práctico para tu aprendizaje</p>
+                <button><a href="#section__div1">Empezar Ahora</a></button>
+            </div>
+        </div>
+     
+        <section class="section1">
+            <div class="section__div" id="section__div1">
+                <h2>Anatomia</h2>
+                <div class="divdiv">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nostrum.</p>
+                        <a href="">Ver más</a>
+                    </div>                
+                    <img src="./img/anatomy.png" alt="">
+                </div>
+                
+            </div>
+            <div class="section__div" id="section__div2">
+                <h2>Fisiología</h2>
+                <div class="divdiv">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nostrum.</p>
+                        <a href="">Ver más</a>
+                    </div>                
+                    <img src="./img/electro.png" alt="">
+                </div>
+            </div>
+            <div class="section__div" id="section__div3">
+                <h2>Microbiología</h2>
+                <div class="divdiv">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nostrum.</p>
+                        <a href="">Ver más</a>
+                    </div>                
+                    <img src="./img/microbiology.png" alt="">
+                </div>
+            </div>
+            <div class="section__div" id="section__div4">
+                <h2>Farmacología</h2>
+                <div class="divdiv">
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, nostrum.</p>
+                        <a href="">Ver más</a>
+                    </div>                
+                    <img src="./img/pills.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section2">
+            <div class="div__section2">
+                <h2>¿Por qué este es el mejor sitio web para aprender Medicina sin "atascarse"?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque soluta fugit ullam unde exercitationem quo eveniet laborum aperiam, rerum facilis molestias hic optio nam laboriosam totam tempora earum ducimus. Cumque.</p>
+            </div>
+            <div>
+                <img src="./img/medicalstudentsss.jpg" alt="">
+            </div>
         </section>
 
-        
-        
-        <div class="div_presion">
-            <div class="div_presion_img">
-                <img src="./img/presion.jpg" alt="">
-            </div>
-            <div class="div_presion-funcion">
-                <h2>¿Quieres saber si tu presión es normal?</h2>
-                <input type="text" name="" id="inputPresion">
-                <p id="resultado"></p>
-                <button id="btn_presion">Enviar</button>
-            </div>
-        </div>
+       <!--  -->
 
 
-        <div class="main_div">
-            <div class="pectoralMayor" id="div_child">
-                <img src="./img/pectoralMayor.jpg" alt="">
-                <button id="botonPectoral">Ver más</button>
-            </div>
-            <div class="dorsalAncho" id="div_child">
-                <img src="./img/dorsalAncho.jpg" alt="">
-                <button id="botonDorsal">Ver más</button>
-            </div>
-            <div class="bicepsBraquial" id="div_child">
-                <img src="./img/bicepsBraquial.jpg" alt="">
-                <button id="botonBiceps">Ver más</button>
-            </div>
+
+
+
+
+
+    <div class="div_presion">
+        <img src="./img/presion.jpg" alt="">
+        <div class="div_presion-funcion">
+            <h2>¿Quieres saber si tu presión es normal?</h2>
+            <input type="text" name="" id="inputPresion">
+            <p id="resultado"></p>
+            <button id="btn_presion">Enviar</button>
         </div>
-        <div class="invitacion">
+    </div>
+
+    <div class="main_div">
+        <div class="pectoralMayor" id="div_child">
+            <img src="./img/pectoralMayor.jpg" alt="">
+            <button id="botonPectoral">Ver más</button>
+        </div>
+        <div class="dorsalAncho" id="div_child">
+            <img src="./img/dorsalAncho.jpg" alt="">
+            <button id="botonDorsal">Ver más</button>
+        </div>
+        <div class="bicepsBraquial" id="div_child">
+            <img src="./img/bicepsBraquial.jpg" alt="">
+            <button id="botonBiceps">Ver más</button>
+        </div>
+    </div>
+    <div class="div-formulario">
+        <div class="div-pregunta">
             <h2>¿Te gustaría recibir notificaciones de nuestro sitio web?</h2>
             <p>Si la respuesta es "si", por favor completa el siguiente formulario para mantenerte al tanto de nuestras novedades</p>
         </div>
-    
-        <div class="div-formulario">
+        <div class="div-input">
             <h2>FORMULARIO</h2>
-            <div class="div-input">
+            <input type="text" id="userInput" class="form-control my-2" placeholder="Ingresar usuario">
+            <input type="email" id="emailInput" placeholder="medico22@gmail.com">
+            <div class="div-select">
+                <h3>Materia de interes:</h3>
+                <select name="curso" id="selectCurso">
+                    <option value="Anatomia">Anatomia</option>
+                    <option value="Fisiología">Fisiología</option>
+                    <option value="Microbiología">Microbiología</option>
+                    <option value="Neonatología">Neonatología</option>
+                    <option value="Farmacología">Farmacología</option>
+                </select>
                 
-                <input type="text" id="userInput" class="form-control my-2" placeholder="Ingresar usuario">
-                <input type="email" id="emailInput" placeholder="medico22@gmail.com">
-                <div class="div-select">
-                    <h3>Materia de interes:</h3>
-                    <select name="curso" id="selectCurso">
-                        <option value="Anatomia">Anatomia</option>
-                        <option value="Fisiología">Fisiología</option>
-                        <option value="Microbiología">Microbiología</option>
-                        <option value="Neonatología">Neonatología</option>
-                        <option value="Farmacología">Farmacología</option>
-                    </select>
-                    
-                </div>
-                <button class="btn btn-primary" id="btnAgregar">Agregar</button>
             </div>
         </div>
-    
-    
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <button class="btn btn-primary" id="btnAgregar">Agregar</button>
+    </div>
+
+    <footer>
+        <div>
+
+        </div>
+    </footer>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/yt/practicas/coderanato1.js"></script>
     </main>
-    <script src="./javascript/main.js"></script>
+    <script src="../formulario.js"></script>
 </body>
 </html>
